@@ -1,0 +1,30 @@
+{
+  "name": "ztools-plugin-subnet-mask",
+  "version": "1.1.0",
+  "description": "ZTools 子网掩码计算器插件",
+  "type": "module",
+  "private": true,
+  "files": [
+    "plugin.json",
+    "logo.png",
+    "index.html",
+    "assets"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build && node scripts/postbuild.mjs",
+    "preview": "vite preview",
+    "pack": "npm run build && node scripts/pack-zpx.mjs"
+  },
+  "dependencies": {
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@electron/asar": "^3.2.18",
+    "@types/node": "^25.3.5",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.11",
+    "vue-tsc": "^2.2.0"
+  }
+}

@@ -1,0 +1,63 @@
+:root {
+  --bg: #ffffff;
+  --surface: #f5f6f8;
+  --surface-hover: #eef0f4;
+  --border: #e4e7ec;
+  --border-strong: #d3d8e0;
+  --text: #1b1f27;
+  --text-muted: #707889;
+  --accent: #2f6bed;
+  --accent-soft: #eaf0fe;
+  --danger: #d93f3f;
+  --danger-soft: #fdeeee;
+  --radius: 10px;
+  --radius-sm: 6px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16181c;
+    --surface: #1e2126;
+    --surface-hover: #262a31;
+    --border: #2b3038;
+    --border-strong: #3a404a;
+    --text: #e6e9ee;
+    --text-muted: #9aa3b0;
+    --accent: #6c9cff;
+    --accent-soft: #1e2a44;
+    --danger: #ff7a7a;
+    --danger-soft: #33191c;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei',
+    sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+input,
+select,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}

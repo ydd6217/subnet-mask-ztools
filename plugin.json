@@ -1,0 +1,48 @@
+{
+  "name": "subnet-mask",
+  "version": "1.1.0",
+  "title": "子网掩码计算器",
+  "description": "输入 IP 与子网掩码（点分或 /CIDR），计算网络地址、广播地址、可用主机范围；支持掩码三格式互转与按主机数反推掩码。纯本地计算，无网络请求。",
+  "author": "ydd",
+  "main": "index.html",
+  "logo": "logo.png",
+  "development": {
+    "main": "http://localhost:5180"
+  },
+  "features": [
+    {
+      "code": "calc",
+      "explain": "子网计算：IP + 掩码 → 网络地址、广播地址、可用主机范围",
+      "icon": "logo.png",
+      "cmds": [
+        "子网掩码",
+        "子网计算",
+        "subnet",
+        {
+          "type": "regex",
+          "match": "^\\s*(?:\\d{1,3}\\.){3}\\d{1,3}\\s*(?:/\\s*\\d{1,2}|\\d{1,3}(?:\\.\\d{1,3}){3})?\\s*$|^\\s*/\\d{1,2}\\s*$",
+          "label": "解析 IP 与掩码",
+          "minLength": 2
+        }
+      ]
+    },
+    {
+      "code": "subnet-plan",
+      "explain": "网络与 IP 地址计算器：按 A/B/C 类网划分或汇总子网，给出子网掩码、网段数量与网络列表",
+      "icon": "logo.png",
+      "cmds": ["子网划分", "网络与IP", "IP地址计算器", "网络计算器"]
+    },
+    {
+      "code": "mask-convert",
+      "explain": "掩码互转：点分十进制、/CIDR、十六进制三种格式互转",
+      "icon": "logo.png",
+      "cmds": ["掩码互转", "子网掩码转换"]
+    },
+    {
+      "code": "reverse-mask",
+      "explain": "按主机数反推：输入需要的可用 IP 数量，算出最小可用掩码",
+      "icon": "logo.png",
+      "cmds": ["反推掩码", "主机数反推"]
+    }
+  ]
+}
